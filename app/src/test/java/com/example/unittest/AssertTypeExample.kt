@@ -1,19 +1,21 @@
 package com.example.unittest
 
+import org.junit.*
 import org.junit.Assert.*
-import org.junit.Before
-import org.junit.Ignore
-import org.junit.Test
 
 class AssertTypeExample {
 
-    private lateinit var exampleStr : String
-    lateinit var assertTypePresenter: AssertTypePresenter
+    var assertTypePresenter: AssertTypePresenter = AssertTypePresenter()
 
-    @Before
-    fun setUp(){
-        exampleStr = "abbcccaaeeeeb bfffffca ccab"
-        assertTypePresenter = AssertTypePresenter()
+    companion object{
+        @JvmStatic
+        lateinit var exampleStr : String
+
+        @BeforeClass
+        @JvmStatic
+        fun setUp() {
+            exampleStr = "abbcccaaeeeeb bfffffca ccab"
+        }
     }
 
     @Test
@@ -41,6 +43,7 @@ class AssertTypeExample {
     @Test
     fun notNullExample(){
         assertNotNull(assertTypePresenter.returnString(exampleStr, 4))
+        fail("fail vermek veya vermemek, bütün mesele bu")
     }
 
     @Test
@@ -53,6 +56,16 @@ class AssertTypeExample {
     fun booleanExample(){
         assertTrue(assertTypePresenter.returnString(exampleStr, 4) == "abbcccaa****b b*****ca ccab")
         assertFalse(assertTypePresenter.returnString(exampleStr, 4) == "")
+    }
+
+    @After
+    fun setUpAfter(){
+        exampleStr = ""
+    }
+
+    @Before
+    fun setUpBefore(){
+        exampleStr = "abbcccaaeeeeb bfffffca ccab"
     }
 
 }
