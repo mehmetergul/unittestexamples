@@ -18,9 +18,11 @@ class AssertTypeExample {
 
     @Test
     fun equalsExample(){
-        assertEquals(assertTypePresenter.returnString(exampleStr, 4), "abbcccaa****b b*****ca ccab")
-        assertEquals(assertTypePresenter.returnString(exampleStr, 3), "abb***aa****b b*****ca ccab")
         assertEquals(assertTypePresenter.returnString(exampleStr, 2), "a***********b b*****ca **ab")
+        assertEquals(assertTypePresenter.returnString(exampleStr, 3), "abb***aa****b b*****ca ccab")
+        assertEquals(assertTypePresenter.returnString(exampleStr, 4), "abbcccaa****b b*****ca ccab")
+        assertEquals(assertTypePresenter.returnString(exampleStr, 5), "abbcccaaeeeeb b*****ca ccab")
+        assertEquals(assertTypePresenter.returnString(exampleStr, 6), "abbcccaaeeeeb bfffffca ccab")
     }
 
     @Test
@@ -48,9 +50,9 @@ class AssertTypeExample {
     }
 
     @Test
-    fun allExample(){
-        assertTypePresenter
+    fun booleanExample(){
+        assertTrue(assertTypePresenter.returnString(exampleStr, 4) == "abbcccaa****b b*****ca ccab")
+        assertFalse(assertTypePresenter.returnString(exampleStr, 4) == "")
     }
-
 
 }

@@ -36,6 +36,7 @@ class MainPresenterTest {
     @Test(expected = IllegalArgumentException::class)
     fun returnIllegalArgumentExceptionLess(){
         mainPresenter.fizzBuzzProblem(-1)
+        // assertThrows(IllegalArgumentException::class, () -> mainPresenter.fizzBuzzProblem(-1))  junit5
     }
 
     @Test(expected = IllegalArgumentException::class)
