@@ -3,6 +3,7 @@ package com.example.unittest
 class AssertTypePresenter {
 
     fun returnString(exampleString : String,  repeatedSize: Int): String{
+        Thread.sleep(500);
         var str = exampleString
         val hashMap:HashMap<String,Int> = HashMap()
         var n = repeatedSize

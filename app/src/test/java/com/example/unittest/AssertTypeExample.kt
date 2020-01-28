@@ -1,9 +1,15 @@
 package com.example.unittest
 
+import org.hamcrest.core.Is.`is`
 import org.junit.*
 import org.junit.Assert.*
+import org.junit.rules.Timeout
+
 
 class AssertTypeExample {
+
+    @Rule @JvmField
+    var globalTimeout: Timeout = Timeout.millis(1000)
 
     var assertTypePresenter: AssertTypePresenter = AssertTypePresenter()
 
@@ -66,6 +72,11 @@ class AssertTypeExample {
     @Before
     fun setUpBefore(){
         exampleStr = "abbcccaaeeeeb bfffffca ccab"
+    }
+
+    @Test()
+    fun timeOutExample(){
+        assertThat("abbcccaa****b b*****ca ccab", `is`(assertTypePresenter.returnString(exampleStr, 4)))
     }
 
 }
