@@ -53,7 +53,7 @@ class AssertTypeExample {
     }
 
     @Test
-    @Ignore("null gelmir")
+    @Ignore("Ignore sebebi buraya yazılabilir")
     fun nullExample(){
         assertNull(assertTypePresenter.returnString(exampleStr, 1))
     }
@@ -74,7 +74,7 @@ class AssertTypeExample {
         exampleStr = "abbcccaaeeeeb bfffffca ccab"
     }
 
-    @Test()
+    @Test
     fun timeOutExample(){
         assertThat("abbcccaa****b b*****ca ccab", `is`(assertTypePresenter.returnString(exampleStr, 4)))
     }
