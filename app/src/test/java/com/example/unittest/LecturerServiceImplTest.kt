@@ -26,7 +26,7 @@ class LecturerServiceImplTest {
                 lecturerRepository
             )
         val lecturerOpt : Lecturer = lecturerService.findLecturer(course, semester)
-        assertThat(lecturerOpt, `is`(lecturer2))
+        assertThat(lecturerOpt, `is`(lecturer))
 
         Mockito.verify(lecturerRepository).findByCourseAndSemester(course, semester)
     }
