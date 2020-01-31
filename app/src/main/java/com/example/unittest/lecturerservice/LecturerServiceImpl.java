@@ -1,10 +1,7 @@
-package com.example.unittest.application;
+package com.example.unittest.lecturerservice;
 
 
-import com.example.unittest.model.Course;
-import com.example.unittest.model.Lecturer;
-import com.example.unittest.model.LecturerRepository;
-import com.example.unittest.model.Semester;
+import com.example.unittest.application.LecturerService;
 
 public class LecturerServiceImpl implements LecturerService {
 

@@ -1,7 +1,7 @@
 package com.example.unittest.application;
 
 
-import com.example.unittest.model.Course;
+import com.example.unittest.lecturerservice.Course;
 import com.example.unittest.model.Department;
 
 import java.util.Optional;

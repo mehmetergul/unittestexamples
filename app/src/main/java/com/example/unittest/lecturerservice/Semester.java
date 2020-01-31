@@ -1,10 +1,10 @@
-package com.example.unittest.model;
+package com.example.unittest.lecturerservice;
 
 import java.time.LocalDate;
 
-import static com.example.unittest.model.Semester.Term.FALL;
-import static com.example.unittest.model.Semester.Term.SPRING;
-import static com.example.unittest.model.Semester.Term.SUMMER;
+import static com.example.unittest.lecturerservice.Semester.Term.FALL;
+import static com.example.unittest.lecturerservice.Semester.Term.SPRING;
+import static com.example.unittest.lecturerservice.Semester.Term.SUMMER;
 
 public class Semester {
 

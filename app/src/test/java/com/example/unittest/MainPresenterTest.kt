@@ -6,6 +6,7 @@ import org.junit.Test
 import java.lang.IllegalArgumentException
 
 class MainPresenterTest {
+
     lateinit var mainPresenter : MainPresenter
 
     @Before

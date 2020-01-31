@@ -1,5 +1,7 @@
 package com.example.unittest.model;
 
+import com.example.unittest.lecturerservice.Course;
+
 import java.util.Optional;
 
 public interface CourseRepository {

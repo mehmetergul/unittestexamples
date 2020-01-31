@@ -1,4 +1,8 @@
-package com.example.unittest.model;
+package com.example.unittest.lecturerservice;
+
+import com.example.unittest.model.Department;
+import com.example.unittest.model.LecturerCourseRecord;
+import com.example.unittest.model.NotActiveSemesterException;
 
 import java.util.Collections;
 import java.util.HashSet;

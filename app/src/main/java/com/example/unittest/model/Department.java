@@ -1,5 +1,8 @@
 package com.example.unittest.model;
 
+import com.example.unittest.lecturerservice.Course;
+import com.example.unittest.lecturerservice.Lecturer;
+
 import java.util.Set;
 
 public class Department {

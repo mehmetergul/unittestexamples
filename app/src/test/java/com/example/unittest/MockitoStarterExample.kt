@@ -23,7 +23,5 @@ class MockitoStarterExample {
         assertFalse(customer.addOrder(Order(order2list)));
         Mockito.verify(inventoryMock, Mockito.times(1)).isStockAvailable("Item1", "Item2");
         Mockito.verify(inventoryMock, Mockito.times(1)).isStockAvailable("Item3");
-
-
     }
 }

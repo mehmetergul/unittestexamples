@@ -1,10 +1,10 @@
 package com.example.unittest
 
-import com.example.unittest.application.LecturerServiceImpl
-import com.example.unittest.model.Course
-import com.example.unittest.model.Lecturer
-import com.example.unittest.model.LecturerRepository
-import com.example.unittest.model.Semester
+import com.example.unittest.lecturerservice.LecturerServiceImpl
+import com.example.unittest.lecturerservice.Course
+import com.example.unittest.lecturerservice.Lecturer
+import com.example.unittest.lecturerservice.LecturerRepository
+import com.example.unittest.lecturerservice.Semester
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert.assertThat
 import org.junit.Test
@@ -21,7 +21,10 @@ class LecturerServiceImplTest {
         val lecturer2  = Lecturer()
         Mockito.`when`(lecturerRepository.findByCourseAndSemester(course, semester)).thenReturn(lecturer)
 
-        val lecturerService = LecturerServiceImpl(lecturerRepository)
+        val lecturerService =
+            LecturerServiceImpl(
+                lecturerRepository
+            )
         val lecturerOpt : Lecturer = lecturerService.findLecturer(course, semester)
         assertThat(lecturerOpt, `is`(lecturer2))
 

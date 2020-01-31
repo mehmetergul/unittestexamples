@@ -1,10 +1,10 @@
 package com.example.unittest.application;
 
 
-import com.example.unittest.model.Course;
-import com.example.unittest.model.Lecturer;
+import com.example.unittest.lecturerservice.Course;
+import com.example.unittest.lecturerservice.Lecturer;
 import com.example.unittest.model.LecturerCourseRecord;
-import com.example.unittest.model.Semester;
+import com.example.unittest.lecturerservice.Semester;
 import com.example.unittest.model.Student;
 import com.example.unittest.model.StudentCourseRecord;
 import com.example.unittest.model.StudentRepository;

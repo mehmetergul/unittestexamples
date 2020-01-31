@@ -1,5 +1,8 @@
-package com.example.unittest.model;
+package com.example.unittest.lecturerservice;
 
+
+import com.example.unittest.model.CourseBuilder;
+import com.example.unittest.model.Department;
 
 public class Course {
 
